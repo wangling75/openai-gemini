@@ -1,4 +1,7 @@
-export const config = {
-  runtime: 'edge',
-  regions: ['iad1'] // 改为美国华盛顿节点
-};
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "regions": ["iad1"],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "api/handler" }
+  ]
+}
